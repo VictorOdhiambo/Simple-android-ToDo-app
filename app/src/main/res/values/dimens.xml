@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <integer name="animation_duration">1000</integer>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/to_do_list"
+        android:scrollbars="vertical"
+        android:scrollbarFadeDuration="500"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+   <RelativeLayout
+       android:id="@+id/new_todo"
+       android:visibility="invisible"
+       android:layout_centerInParent="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/add_todo"
+           android:src="@drawable/ic_note_add"
+           android:scaleType="centerCrop"
+           android:layout_centerHorizontal="true"
+           android:alpha="0.6"
+           android:layout_width="100dp"
+           android:layout_height="100dp" />
+       <TextView
+           android:id="@+id/t1"
+           android:text="Start by adding a title"
+           android:fontFamily="sans-serif-light"
+           android:textStyle="bold"
+           android:textSize="18sp"
+           android:layout_below="@id/add_todo"
+           android:layout_centerHorizontal="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:id="@+id/t2"
+           android:text="Create new title by clicking on the button below"
+           android:fontFamily="sans-serif-light"
+           android:layout_below="@id/t1"
+           android:layout_centerHorizontal="true"
+           android:textSize="12sp"
+           android:textStyle="normal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+   </RelativeLayout>
+</RelativeLayout>

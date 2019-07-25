@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/todo_writing_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadToDo">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:weightSum="8"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:padding="15dp"
+            android:background="@drawable/todo_writing_bg"
+            android:hint="Title"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/time"
+            android:src="@drawable/ic_time"
+            android:background="@drawable/selector"
+            android:clickable="true"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/text_title"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/date"
+            android:src="@drawable/ic_date"
+            android:background="@drawable/selector"
+            android:clickable="true"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/text_title"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/text_content"
+        android:hint="What are your plans?"
+        android:gravity="top"
+        android:layout_above="@id/save_btn"
+        android:fontFamily="sans-serif"
+        android:padding="15dp"
+        android:textColor="#4D4C4C"
+        android:background="@drawable/todo_writing_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="150dp"
+        android:layout_below="@+id/layout"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector"
+        android:clickable="true"
+        android:fontFamily="sans-serif"
+        android:padding="15dp"
+        android:text="SAVE"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
